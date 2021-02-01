@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>LE site de tout les gossips</h1>
+    <p>Bienvenue a toi, le site est en construction mais en attendant tu peux <a href="/gossips/new/">creer un gossip</a> si tu le souhaite </p>
+   
+   
+    <% gossips.each do |gossip| %>
+      <p>
+         <%= gossip.author %><br/>
+         <%= gossip.content %>
+       
+      </p>
+    <% end %>
+    
+    <% gossips.each_with_index do |gossip, i| %></br>
+
+    <a href = "/gossips/<%=i + 1%>/"> decouvre le potin N°<%=i + 1%></br> </a>
+    <% end %>
+    </body>
+</html>
